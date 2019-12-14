@@ -98,6 +98,7 @@ header > span{
 footer{
     text-align: center;  
     border-top: solid rgb(211, 109, 109) 3px;
+    color: rgb(66, 66, 66);
 }
 
 
