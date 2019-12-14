@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Are You Eating?</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header class="menuBar">
+        <span>What Are You Eating?</span>
+        <button>Log in</button>
+    </header>
+    <main class="mainContent"> 
+        <section class="currentDate">
+            <span id="displayCurrentDate">Display current day and date</span>
+        </section>
+        
+        <label for="" class="gatherButtonLabel">Show Daily Consumption</label>
+        <button id="gatherDailyConsumption"class="gatherButton">Calculate</button>
+        
+        <form action="phpScript.php" method="POST">
+            <section class="cardWhenAreYouEating">
+                <header>
+                    <label for="WhenAreYouEating">When are you eating?</label>
+                </header>
+                <main> 
+                    <select name="WhenAreYouEating" id="">
+                        <option selected>Select One</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch" >Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Snack">Snack</option>
+                    </select>
+                </main>
+            </section>
+            
+            <section class="cardWhatAreYouEating">
+                <header>
+                    <label for="">What are you eating?</label>
+                </header>
+                <main>
+                    <input type="text" placeholder="Type here ...">
+                </main> 
+            </section>
+
+            <section class="cardAmountFats">
+                <header>
+                    <label for="Amount - Fat">Amount - Fats</label>
+                </header>
+                <main>
+                    <select name="Amount - Fat" id="">
+                        <option selected>Select One</option>
+                        <option value="1">High</option>
+                        <option value="0.5">Medium</option>
+                        <option value="0.25">Low</option>
+                        <option value="0">None</option>
+                    </select>
+                </main>
+            </section>
+
+            <section class="cardAmountProteins">
+                <header>
+                    <label for="Amount - Proteins">Amount - Proteins</label>
+                </header>
+                    <main>
+                        <select name="Amount - Proteins" id="">
+                        <option selected>Select One</option>
+                        <option value="1">High</option>
+                        <option value="0.5">Medium</option>
+                        <option value="0.25">Low</option>
+                        <option value="0">None</option>
+                    </select>
+                </main>
+            </section>
+            
+            <section class="cardAmountCarbs">
+                <header>
+                    <label for="Amount - Carbs">Amount - Carbs</label>
+                </header>
+                <main>
+                    <select name="Amount - Carbs" id="">
+                        <option selected>Select One</option>
+                        <option value="1">High</option>
+                        <option value="0.5">Medium</option>
+                        <option value="0.25">Low</option>
+                        <option value="0">None</option>
+                    </select>
+                </main>
+            </section>
+            
+        
+            <button type="submit" class="saveButton">SAVE</button>
+            
+
+            <!--Modal syntax------------------------------->
+            <div id="gatherDailyConsumptionModal" class="modalBoxStyle">
+                <main class="modalContentStyle">
+                    <section class="closeModal">&times;</section>
+                    <section>Amount - Fats:<span>4</span></span></section>
+                    <section>Amount - Proteins:<span>4</span></span></section>
+                    <section>Amount - Carbs:<span>4</span></span></section>
+                </main>
+            </div>
+            
+            
+
+        </form>
+        </section>
+    </main>
+    <footer class="footerBar">crafted with love from your fairy godmother</footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

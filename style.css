@@ -1,0 +1,105 @@
+/*------------flexlayout for page and anchor style-----------------*/
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+a{
+    text-decoration: none;
+}
+/*breaks site visualy into sections*/
+.colorSiteBreaker{
+    flex-basis: 100%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    background-color:  rgb(211, 109, 109);
+    color: white;
+    padding: 1%;
+    font-weight: bold;
+    font-size: var(--text-size);
+}
+/*----------general style for boxes--------------*/
+:root{
+    --text-color: rgb(66, 66, 66);
+    --text-size: calc(1em + 0.5vw);
+    --space-between-text: calc(1.3em + 0.5vw); 
+    --box-border: solid gray 3px;
+    --important-color: rgb(211, 109, 109);
+    --padding-size: 2vw;
+}
+.textBoxStyle{
+    border-top: var(--box-border);
+    border-bottom: var(--box-border);
+    padding: var(--padding-size);
+}
+.textStyle{
+    font-size: var(--text-size);
+    color: var(--text-color);
+    line-height: var(--space-between-text);
+}
+/*--------------important text-------------*/
+.highlightedText{
+    color: var(--important-color);
+}
+/*---------------style for header------------*/
+/*.logo{
+    
+}*/
+.heading{
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-bottom: solid var(--important-color) 3px;
+    padding: 5px;
+    margin-bottom: 10%;
+}
+/*clean up this mess!!!*/
+header > span{
+    align-self: center;
+    text-align: center;
+    color: rgb(66, 66, 66);
+    font-size: var(--text-size);
+    font-weight: bold;
+}
+.changeLangBtn{
+    background-color: rgb(211, 109, 109);
+    border: solid rgb(211, 109, 109) 1px;
+    border-radius: 5px;
+}
+/*--------style for welcome section-------*/
+.welcomeSectionLayout{
+    align-self: center;
+    width: 60%;
+}
+.welcomeTextStyle{
+    font-size: var(--text-size);
+    /*line-height: var(--space-between-text);???????????????*/
+    font-weight: bold;
+}
+.tallerText{
+    color: var(--important-color);
+    font-size: calc(1em + 0.7vh);
+}
+/*--------style for projects section-------*/
+.projectsSectionLayout{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+.projectsSectionLayout > .textBoxStyle{
+    margin-bottom: 5%;
+}
+/*--------style for footer-------*/
+footer{
+    text-align: center;  
+    border-top: solid rgb(211, 109, 109) 3px;
+}
+
+
+
+
