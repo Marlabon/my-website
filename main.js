@@ -1,0 +1,1 @@
+alert('Site under construction, please weare a helmet!');
