@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Libre Baskerville', serif;
+    background-color: #f5efe0;
 }
 .intro{
     display: flex;
@@ -122,6 +123,7 @@ main > header > p:last-of-type{
     border: solid #11875d 1px;
     border-radius: 10px;
     box-shadow: 11px 11px 21px 3px rgba(166,156,166,0.7);
+    background-color: white;
 }
 .project-card > header{
     display: flex;
