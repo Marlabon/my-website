@@ -61,9 +61,6 @@ main > header > p:last-of-type{
         margin: 40px 200px 0 200px;
     }
 }
-.list-container ul{
-    padding-inline-start: 15px;
-}
 .list-container li::marker{
     color: #11875d;
 }
@@ -87,7 +84,11 @@ main > header > p:last-of-type{
 .call-to-action > h2{
     color: #11875d;
 }
-.call-to-action img{
+.social-media-icons{
+    display: flex;
+    justify-content: center;
+}
+.social-media-icons img{
     max-width: 100px;
     max-height: 100px;
 }
