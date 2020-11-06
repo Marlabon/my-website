@@ -142,7 +142,5 @@ footer{
     margin-top: 40px;
     background-color: #11875d;
     color: white;
-}
-footer a{
-    color: white;
+    text-align: center;
 }
