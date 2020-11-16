@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
     <title>Alexander's Personal Site</title>
@@ -16,58 +17,78 @@
         </div>
     </header>
     <main>
-        <header>
+        <header class="container">
             <h2>About me</h2>
             <p>My name is Alexander Weinberger and I like to build stuff for the web and create good user experience.<br>I'm interested in various things in the field of web development and want to learn more about them.</p>
             <p>Some are:</p> 
         </header>
-        <section class="list-container">
-            <ul>
-                <li>Semantic HTML</li>
-                <li>Good'ol CSS and Tailwind</li>
-                <li>JavaScript and Vue</li>
-            </ul>
-            <ul>
-                <li>User Experience Design</li>
-                <li>Web Accessibility</li>
-                <li>Technical writing</li>
-            </ul>
+        <section class="container">
+            <div class="row">
+                <div class="col-sm d-flex justify-content-center">
+                    <ul >
+                        <li>Semantic HTML</li>
+                        <li>Good'ol CSS and Tailwind</li>
+                        <li>JavaScript and Vue</li>
+                    </ul>
+                </div>
+                <div class="col-sm d-flex justify-content-center">
+                    <ul>
+                        <li>User Experience Design</li>
+                        <li>Web Accessibility</li>
+                        <li>Technical writing</li>
+                    </ul>
+                </div>
+            </div>
         </section>
-        <section class="call-to-action">
+        <section class="container call-to-action">
             <h2>Get in contact</h2>
             <p>Say hello and drop me a line, <a href="mailto:alexanderweinberger@gmx.at">alexanderweinberger@gmx.at</a></p>
             <p>If your are more the reading type, <a href="https://blog.alexanderweinberger.at/" target="_blank">dive deep into my blog</a>. Caution sharp font ahead! (Under construction!)</p>
-            <div class="social-media-icons">
-                <a href="https://github.com/marlabon" target="_blank"><img src="assets/pics/Octocat.png" alt="A picture of Octocat from github."></a>
+            <div class="d-flex justify-content-center">
+                <a href="https://github.com/marlabon" target="_blank"><img class="social-media-icons-size" src="assets/pics/Octocat.png" alt="A picture of Octocat from github."></a>
             </div>
         </section>
-        <section class="about-projects">
-            <header>
-                <h2>Projects</h2>
-                <p>To learn more about my projects take a look or head over to the repository.</p>
-            </header>
-            <article class="project-card">
-                <header>
-                    <a href="https://kfm.htl-ottakring.schulwebspace.at/" target="_blank"><img src="assets/pics/simpleStatistics.png" alt="The Simple Statistics Logo"></a>
-                    <h2>Simple Statistics</h2>
-                </header>
-                <p>A people counter for small to medium sized businesses to track their customer frequency and help them make better business decisions.</p>
-                <p>Website: <a href="https://kfm.htl-ottakring.schulwebspace.at/" target="_blank">Website of the project</a></p>
-                <p>GitHub: <a href="https://github.com/Marlabon/Kundenfrequenzmesser" target="_blank">GitHub Repo</a></p>
-            </article>
-            <article class="project-card">
-                <header>
-                    <a href="https://condescending-thompson-2bb07a.netlify.app/" target="_blank"><img src="/assets/pics/weekly_logo.png" alt="The Weekly Logo"></a>
-                    <h2>Weekly</h2>
-                </header>
-                <p>A little prototype project while I learn Vue 3 to foster my knowledge.</p>
-                <p>Website: <a href="https://condescending-thompson-2bb07a.netlify.app/" target="_blank">Website of the project</a></p>
-                <p>GitHub: <a href="https://github.com/Marlabon/weeklyPlanner" target="_blank">GitHub Repo</a></p>
-            </article>
+        <section class="container about-projects">
+            <h2>Projects</h2>
+            <p>To learn more about my projects take a look or head over to the repository.</p>
+            <div class="card-deck">
+                <div class="col-sm">
+                    <article class="card project-card">
+                        <a href="https://kfm.htl-ottakring.schulwebspace.at/" target="_blank">
+                            <img class="card-img-top" src="assets/pics/simpleStatistics.png" alt="The Simple Statistics Logo">
+                        </a>
+                        <div class="card-body">    
+                            <h2 class="card-title">Simple Statistics</h2>
+                            <p class="card-text">A people counter for small to medium sized businesses to track their customer frequency and help them make better business decisions.</p>
+                            <div class="card-footer d-flex justify-content-around">
+                                <a class="card-link" href="https://kfm.htl-ottakring.schulwebspace.at/" target="_blank">Website of the project</a>
+                                <a class="card-link" href="https://github.com/Marlabon/Kundenfrequenzmesser" target="_blank">GitHub Repo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm">
+                    <article class="card project-card">
+                        <a href="https://condescending-thompson-2bb07a.netlify.app/" target="_blank">
+                            <img class="card-img-top" src="/assets/pics/weekly_logo.png" alt="The Simple Statistics Logo">
+                        </a>
+                        <div class="card-body">    
+                            <h2 class="card-title">Weekly</h2>
+                            <p class="card-text">A little prototype project while I learn Vue 3 to foster my knowledge.</p>
+                            <div class="d-flex justify-content-around">
+                                <a class="card-link" href="https://condescending-thompson-2bb07a.netlify.app/" target="_blank">Website of the project</a>
+                                <a class="card-link" href="https://github.com/Marlabon/weeklyPlanner" target="_blank">GitHub Repo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
+    <footer class="d-flex justify-content-center">
         Created by Alexander Weinberger
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html> 
