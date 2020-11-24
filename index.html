@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
-    
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="main.js" defer></script>
     <title>Alexander's Personal Site</title>
 </head>
 <body>
-    <header class="intro">
-        <div>
-            <h1>Hi there, and wellcome to my site!</h1>
-            <img src="assets/pics/down-arrow.svg" alt="An arrow pointing down">
-        </div>
-    </header>
+    <div id="app">
+        <header class="intro" :class="specialBackgroundStyle">
+            <div> 
+                <h1>Hi there, and welcome to my site!</h1>
+                <button class="btnStyle" @click="toggleBackground">{{ specialBackground ? 'Turn Special Background off' : 'Turn Special Background on' }}</button>
+                <a v-if="specialBackground === true" href="https://www.magicpattern.design/tools/css-backgrounds/" target="_blank">To Special Background Source</a>
+                <img src="assets/pics/down-arrow.svg" alt="An arrow pointing down">
+            </div>
+            
+        </header>
+    </div>
     <main>
         <header>
             <h2>About me</h2>
-            <p>My name is Alexander Weinberger and I like to build stuff for the web.<br>I'm interested and want to learn more about many things in the field of web development and related ones.</p>
+            <p>My name is Alexander Weinberger and I like to build stuff for the web and create good user experience.<br>I'm interested in various things in the field of web development and want to learn more about them.</p>
             <p>Some are:</p> 
         </header>
         <section class="list-container">
@@ -30,16 +37,16 @@
             <ul>
                 <li>User Experience Design</li>
                 <li>Web Accessibility</li>
-                <li>Writing about stuff aka technical writing</li>
+                <li>Technical writing</li>
             </ul>
         </section>
         <section class="call-to-action">
             <h2>Get in contact</h2>
             <p>Say hello and drop me a line, <a href="mailto:alexanderweinberger@gmx.at">alexanderweinberger@gmx.at</a></p>
-            <p>If your are more the reading typ, <a href="https://blog.alexanderweinberger.at/">dive deep into my blog</a>. Caution sharp font ahead!</p>
-            <a href="https://github.com/marlabon">
-                <img src="assets/pics/Octocat.jpg" alt="A picture of Octocat from github.">
-            </a>
+            <p>If your are more the reading type, <a href="https://blog.alexanderweinberger.at/" target="_blank">dive deep into my blog</a>. Caution sharp font ahead! (Under construction!)</p>
+            <div class="social-media-icons">
+                <a href="https://github.com/marlabon" target="_blank"><img src="assets/pics/Octocat.png" alt="A picture of Octocat from github."></a>
+            </div>
         </section>
         <section class="about-projects">
             <header>
@@ -48,36 +55,26 @@
             </header>
             <article class="project-card">
                 <header>
-                    <a href="https://kfm.htl-ottakring.schulwebspace.at/"><img src="assets/pics/simpleStatistics.png" alt="The Simple Statistics Logo"></a>
+                    <a href="https://kfm.htl-ottakring.schulwebspace.at/" target="_blank"><img src="assets/pics/simpleStatistics.png" alt="The Simple Statistics Logo"></a>
                     <h2>Simple Statistics</h2>
                 </header>
                 <p>A people counter for small to medium sized businesses to track their customer frequency and help them make better business decisions.</p>
-                <p>Website: <a href="https://kfm.htl-ottakring.schulwebspace.at/">Website of the project</a></p>
-                <p>GitHub: <a href="https://github.com/Marlabon/Kundenfrequenzmesser">GitHub Repo</a></p>
+                <p>Website: <a href="https://kfm.htl-ottakring.schulwebspace.at/" target="_blank">Website of the project</a></p>
+                <p>GitHub: <a href="https://github.com/Marlabon/Kundenfrequenzmesser" target="_blank">GitHub Repo</a></p>
             </article>
             <article class="project-card">
                 <header>
-                    <a href="#"><img src="#" alt="Sample Image"></a>
-                    <h2>Sample Heading</h2>
+                    <a href="https://condescending-thompson-2bb07a.netlify.app/" target="_blank"><img src="/assets/pics/weekly_logo.png" alt="The Weekly Logo"></a>
+                    <h2>Weekly</h2>
                 </header>
-                <p>Sample Project Text</p>
-                <p>Website: <a href="#">Website of project</a></p>
-                <p>GitHub: <a href="#">GitHub repo of project</a></p>
-            </article>
-            <article class="project-card">
-                <header>
-                    <a href="#"><img src="#" alt="Sample Image"></a>
-                    <h2>Sample Heading</h2>
-                </header>
-                <p>Sample Project Text</p>
-                <p>Website: <a href="#">Website of project</a></p>
-                <p>GitHub: <a href="#">GitHub repo of project</a></p>
+                <p>A little prototype project while I learn Vue 3 to foster my knowledge.</p>
+                <p>Website: <a href="https://condescending-thompson-2bb07a.netlify.app/" target="_blank">Website of the project</a></p>
+                <p>GitHub: <a href="https://github.com/Marlabon/weeklyPlanner" target="_blank">GitHub Repo</a></p>
             </article>
         </section>
     </main>
     <footer>
-        <small>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
+        Created by Alexander Weinberger
     </footer>
-    <!-- <script src="main.js"></script> -->
 </body>
-</html>
+</html> 
