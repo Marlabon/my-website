@@ -10,7 +10,6 @@ body{
 }
 .intro{
     display: flex;
-    align-items: flex-end;
     height: 100vh;
     background-color: var(--primary-color);
 }
