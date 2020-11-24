@@ -10,6 +10,12 @@ body{
     height: 100vh;
     background-color: #11875d;
 }
+.specialBackground{
+    background-color: #11875d;
+    opacity: 1;
+    background-size: 80px 80px;
+    background-image:  repeating-linear-gradient(0deg, #f5efe0, #f5efe0 4px, #11875d 4px, #11875d);
+} 
 .intro > div{
     display: flex;
     flex-direction: column;
@@ -19,7 +25,25 @@ body{
     margin: auto;
     color: white;
 }
+.intro a{
+    margin: 10px 0;
+    color: white;
+}
+.btnStyle{
+    max-width: max-content;
+    border-radius: 10px;
+    border: solid 1px white;
+    background-color: transparent;
+    color: white;
+    padding: .3em;
+  }
+.btnStyle:active{
+    background-color: white;
+    color: #11875d;
+    border-color:#11875d;
+}
 .intro img{
+    margin-top: 11px;
     max-width: 50px;
     max-height: 50px;
 }
@@ -144,3 +168,4 @@ footer{
     color: white;
     text-align: center;
 }
+
